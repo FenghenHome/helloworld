@@ -45,17 +45,12 @@ o:depends("enable_switch", "1")
 o.default = 3
 
 o = s:option(Value, "gfwlist_url", translate("gfwlist Update url"))
-o:value("https://fastly.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt", translate("v2fly/domain-list-community"))
-o:value("https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt", translate("Loyalsoldier/v2ray-rules-dat"))
-o:value("https://fastly.jsdelivr.net/gh/Loukky/gfwlist-by-loukky/gfwlist.txt", translate("Loukky/gfwlist-by-loukky"))
-o:value("https://fastly.jsdelivr.net/gh/gfwlist/gfwlist/gfwlist.txt", translate("gfwlist/gfwlist"))
-o.default = "https://fastly.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt"
+o:value("https://fastly.jsdelivr.net/gh/FenghenHome/filters@gh-pages/dnsmasq.gfw-domains.conf", translate("FenghenHome gfw list"))
+o.default = "https://fastly.jsdelivr.net/gh/FenghenHome/filters@gh-pages/dnsmasq.gfw-domains.conf"
 
 o = s:option(Value, "chnroute_url", translate("Chnroute Update url"))
-o:value("https://ispip.clang.cn/all_cn.txt", translate("Clang.CN"))
-o:value("https://ispip.clang.cn/all_cn_cidr.txt", translate("Clang.CN.CIDR"))
-o:value("https://fastly.jsdelivr.net/gh/gaoyifan/china-operator-ip@ip-lists/china.txt", translate("china-operator-ip"))
-o.default = "https://ispip.clang.cn/all_cn.txt"
+o:value("https://fastly.jsdelivr.net/gh/17mon/china_ip_list/china_ip_list.txt", translate("Clang.CN"))
+o.default = "https://fastly.jsdelivr.net/gh/17mon/china_ip_list/china_ip_list.txt"
 
 o = s:option(Flag, "netflix_enable", translate("Enable Netflix Mode"))
 o.rmempty = false
@@ -108,10 +103,8 @@ o = s:option(Flag, "adblock", translate("Enable adblock"))
 o.rmempty = false
 
 o = s:option(Value, "adblock_url", translate("adblock_url"))
-o:value("https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_dnsmasq.conf", translate("NEO DEV HOST Lite"))
-o:value("https://raw.githubusercontent.com/neodevpro/neodevhost/master/dnsmasq.conf", translate("NEO DEV HOST Full"))
-o:value("https://anti-ad.net/anti-ad-for-dnsmasq.conf", translate("anti-AD"))
-o.default = "https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_dnsmasq.conf"
+o:value("https://fastly.jsdelivr.net/gh/FenghenHome/filters@gh-pages/dnsmasq.adblock-domains.conf", translate("FenghenHome adblock list"))
+o.default = "https://fastly.jsdelivr.net/gh/FenghenHome/filters@gh-pages/dnsmasq.adblock-domains.conf"
 o:depends("adblock", "1")
 o.description = translate("Support AdGuardHome and DNSMASQ format list")
 
